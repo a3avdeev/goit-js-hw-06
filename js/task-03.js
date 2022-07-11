@@ -17,12 +17,12 @@ const gallery = document.querySelector(".gallery");
 const img = images
   .map(
     (image) =>
-      `<li class="gallery-item"><img class="gallery-image" src="${image.url}" alt="${image.alt}"></li>`
+      `<li class="gallery-item"><img class="gallery-image" src="${image.url}" alt="${image.alt}" width="50%" height="100%"></li>`
   )
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", img);
 gallery.setAttribute(
   "style",
-  "list-style: none; display: flex; flex-direction: column; font-size: 8px;"
+  "list-style: none; display: flex; flex-direction: row; justify-content: space-around;; font-size: 8px;"
 );
